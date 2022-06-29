@@ -5,12 +5,14 @@ import LateralSidebar from '../components/general/LateralSidebar.vue';
 </script>
 
 <template>
-  <TopNavbar></TopNavbar>
-  <div class="container-fluid text-center h-100">
-    <div class="row content h-100">
-      <LateralSidebar></LateralSidebar>
-      <div class="mainFrame col-sm-10">
-        <RouterView />
+  <div class="container text-center h-100">
+    <TopNavbar></TopNavbar>
+    <div class="row content contenidos">
+      <div style="display: flex;">
+        <LateralSidebar></LateralSidebar>
+        <div class="mainFrame">
+          <RouterView />
+        </div>
       </div>
     </div>
   </div>
@@ -22,12 +24,13 @@ import LateralSidebar from '../components/general/LateralSidebar.vue';
 
 <style lang="scss">
 .mainFrame {
-  background-color: #e9e9e9;
+  width: 100%;
+  background-color: inherit;
   border-radius: 2px;
   padding: 12px;
+}
 
-  div {
-    background-color: white;
-  }
+.contenidos {
+  box-sizing: border-box;
 }
 </style>

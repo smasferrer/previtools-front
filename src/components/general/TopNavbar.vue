@@ -1,5 +1,5 @@
 <script setup>
-import projectLogo from '../../assets/images/general/logo.png'
+import projectLogo from '../../assets/images/general/logonew.svg'
 </script>
 <template>
   <nav class="navbar navbar-inverse">
@@ -12,7 +12,6 @@ import projectLogo from '../../assets/images/general/logo.png'
     </div>
   </nav>
 </template>
-
 <script>
 export default {
 
@@ -21,14 +20,16 @@ export default {
 
 <style lang="scss" scoped>
 .navbar.navbar-inverse {
+  background: inherit;
   .container-fluid {
-    padding-left: 1px;
-    padding-right: 1px;
-    border-bottom-style: solid;
+    height:70px;
 
     .divImageLogo {
-      background-color: $primary-color-frame;
-      text-align: center;
+      padding: 14px 14px 14px 20px;
+      text-align: left;
+      img{
+        width: 150px;;
+      }
     }
   }
 }

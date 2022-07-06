@@ -3,19 +3,47 @@
 
 <template>
   <div class="header-content">
-    <h3>Título de mi tabla</h3>
-  </div>
-  <div class="cards">
-    <b-card no-body class="text-center">
-      <div class="components">
-        <el-table :data="tableData" class="tabla">
-          <el-table-column prop="date" label="Date" width="180" />
-          <el-table-column prop="name" label="Name" width="180" />
-          <el-table-column prop="address" label="Address" />
-        </el-table>
+    </div>
+
+  <!-- Tabla -->
+  <el-row :gutter="20">
+    <el-col :span="24">
+      <div class="cards">
+        <b-card no-body>
+            <h3>Tabla</h3>
+            <el-table :data="tableData" class="tabla">
+              <el-table-column prop="date" label="Date" width="180" />
+              <el-table-column prop="name" label="Name" width="180" />
+              <el-table-column prop="address" label="Address" />
+            </el-table>
+        </b-card>
       </div>
-    </b-card>
-  </div>
+    </el-col>
+  </el-row>
+  <!-- fin tabla -->
+  <!-- Buttons -->
+  <el-row :gutter="20">
+    <el-col :span="12">
+      <div class="grid-content ep-bg-purple" />
+      <div class="cards">
+        <div class="components">
+          <b-card no-body>
+            <h3>Botones</h3>
+            <el-row class="mb-4">
+              <button class="pt-primary">Primary</button>
+              <button class="pt-secondary">Secondary</button>
+              <button class="pt-other">other</button>
+            </el-row>
+          </b-card>
+        </div>
+      </div>
+    </el-col>
+    <el-col :span="12">
+      <div class="grid-content ep-bg-purple" />Es el mismo
+    </el-col>
+  </el-row>
+  <!-- card -->
+
 </template>
 
 <script>
@@ -50,28 +78,20 @@ export default {
 </script>
 
 <style lang="scss">
-.header-content{
-  text-align: left;
-  h3{
-    font-size: 22px;
-  }
+.el-button {
+  padding: 12px 24px;
 }
 
-.components{
-  padding: 24px;
-}
-.cards{
-  box-shadow: 0 20px 27px rgb(0 0 0 / 5%);
-}
 .tabla {
   width: 100%;
   padding: 0;
-
 }
-.el-table th.el-table__cell>.cell{
+
+.el-table th.el-table__cell>.cell {
   color: #000;
 }
-.mainFrame .tabla .el-table__cell{
+
+.mainFrame .tabla .el-table__cell {
   padding: 16px 0;
 }
 </style>

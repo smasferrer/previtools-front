@@ -9,17 +9,30 @@ body {
     height: 100%;
 }
 
+h1 {
+    text-align: left;
+    font-size: 30px;
+    font-weight: 700;
+}
+
 .cards {
     background-color: white;
     border-radius: 12px;
     padding: 24px;
     margin: 0 0 24px;
     box-shadow: 0 20px 27px rgb(0 0 0 / 5%);
-
     h3 {
         text-align: left;
-        font-size: 20px;
         margin: 0 0 24px;
+        font-size: 20px;
+        font-weight: 700;
+        color: rgb(88, 88, 88);
+    }
+    h5 {
+        font-size: 16px;
+        text-align: left;
+        color: rgb(63, 63, 63);
+        font-style: italic;
     }
 }
 
@@ -47,7 +60,6 @@ body {
 }
 
 // Botones
-
 button {
     display: inline-block;
     padding: 0.5em 1.7em;
@@ -62,15 +74,17 @@ button {
     transition: all 0.2s;
 }
 
-.el-table__row:hover {
-    background-color: aqua;
-  }
-
 .pt-primary {
     background-color: $color-primario;
     color: $negro;
     &:hover {
         background-color: rgb(255, 193, 36);
+    }
+    &:disabled {
+        opacity: 0.3;
+        &:hover {
+            background-color: $color-primario;
+        }
     }
 }
 
@@ -81,6 +95,12 @@ button {
     &:hover {
         background-color: rgb(228, 228, 228);
     }
+    &:disabled {
+        opacity: 0.3;
+        &:hover {
+            background-color: #f1f1f1;
+        }
+    }
 }
 
 .pt-other {
@@ -89,6 +109,20 @@ button {
     &:hover {
         color: $color-primario
     }
+    &:disabled {
+        opacity: 0.3;
+        &:hover {
+            background-color: inherit;
+            color: $color-secundario;
+        }
+    }
+}
+
+
+/*Inputs*/
+
+.el-input__wrapper.is-focus {
+    border-color: red;
 }
 
 
@@ -108,7 +142,6 @@ footer {
         height: auto;
         padding: 15px;
     }
-
     .row.content {
         height: auto;
     }
@@ -117,7 +150,6 @@ footer {
 .navbar.navbar-inverse {
     padding-top: 0px;
     padding-bottom: 0px;
-
     .container-fluid {
         height: 50px;
     }
